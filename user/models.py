@@ -5,4 +5,4 @@ from core.models import BaseModel
 
 class User(AbstractUser, BaseModel):
 
-    pass
+    telegram_id = models.CharField(max_length=128, null=True)

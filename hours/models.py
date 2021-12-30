@@ -9,7 +9,7 @@ class Category(BaseModel):
     name = models.CharField(max_length=128)
 
 
-# class HoursCategory(BaseModel):
-#     user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
-#     category = models.ForeignKey(Category, on_delete=models.CASCADE)
-#     activity_in_minutes = models.IntegerField(null=True)
+class HoursCategory(BaseModel):
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+    category = models.ForeignKey(Category, on_delete=models.CASCADE)
+    activity_in_minutes = models.IntegerField(null=True)
